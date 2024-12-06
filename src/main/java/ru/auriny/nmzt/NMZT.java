@@ -32,7 +32,7 @@ import org.slf4j.Logger;
 @Mod(NMZT.MODID)
 public class NMZT {
     public static final String MODID = "nmzt";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public NMZT() {
 

@@ -5,12 +5,13 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import ru.auriny.nmzt.NMZT;
 
 @Mixin(MinecraftServer.class)
 public class MinecraftServerMixin {
     @Inject(method = "stopServer", at = @At("TAIL"))
     private void onShutdown(CallbackInfo ci) {
-        System.out.println("Terminating threads...");
+        NMZT.LOGGER.info("Terminating threads...");
 
         ThreadGroup rootGroup = Thread.currentThread().getThreadGroup();
         while (rootGroup.getParent() != null) {
