@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ru.auriny.nmzt.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "NMZT.refmap.json",
+  "mixins": [
+    "MinecraftServerMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
