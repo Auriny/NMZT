@@ -11,8 +11,6 @@ import ru.auriny.nmzt.NMZT;
 public class MinecraftServerMixin {
     @Inject(method = "stopServer", at = @At("TAIL"))
     private void onShutdown(CallbackInfo ci) {
-        NMZT.LOGGER.info("Terminating threads...");
-
         ThreadGroup rootGroup = Thread.currentThread().getThreadGroup();
         while (rootGroup.getParent() != null) {
             rootGroup = rootGroup.getParent();
