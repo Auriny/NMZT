@@ -5,7 +5,9 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import ru.auriny.nmzt.NMZT;
+
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 @Mixin(MinecraftServer.class)
 public class MinecraftServerMixin {
@@ -24,5 +26,7 @@ public class MinecraftServerMixin {
                 thread.interrupt();
             }
         }
+
+        Executors.newSingleThreadScheduledExecutor().schedule(() -> Runtime.getRuntime().halt(0), 3, TimeUnit.SECONDS);
     }
 }
