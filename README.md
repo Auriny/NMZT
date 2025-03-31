@@ -1,2 +1,11 @@
-## Say goodbye to lingering threads and zombie server processes!
-This mod keeps a close eye on your server’s shutdown process, ensuring all threads are **forcefully terminated if they refuse to stop**. It eliminates resource leaks, guarantees a complete shutdown, and brings you peace of mind whether you're running a server or developing mods.
+Did you ever had your server refuse to shut down after running **/stop**? Annoying, right? That’s because some mod developers forgets to close async threads, preventing the server from shutting down properly.
+
+**NMZT** fixes this by forcefully terminating any lingering "zombie" threads **after** the world and playerdata have been safely saved. No more manually killing your server process after every restart or crash — **NMZT** handles it for you. 
+## ✅ Features:
+- Fully automatic. You can literally just put the mod in your mods folder and completely forget about this problem. ⚙️
+- Lightweight. This mod implements only 2 hooks into the vanilla code and nothing else, so it will NOT reduce the server performance. 🪶
+- Safe. NMZT is 99.9% compatible with other mods, so I don't think it can break your world or modpack. 🛡️
+
+You **can** add this mod to any modpacks w/o asking me. 
+
+![Woah! Zombie threads have been terminated by NMZT](https://cdn.modrinth.com/data/cached_images/daa8c3a0bf80a8ba2a0855d687cc9dc4cc08c99e.png)
