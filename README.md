@@ -6,6 +6,6 @@ Did you ever had your server refuse to shut down after running **/stop**? Annoyi
 - Lightweight. This mod implements only 2 hooks into the vanilla code and nothing else, so it will NOT reduce the server performance. 🪶
 - Safe. NMZT is 99.9% compatible with other mods, so I don't think it can break your world or modpack. 🛡️
 
-You **can** add this mod to any modpacks w/o asking me. 
+Modrinth download: https://modrinth.com/mod/nmzt
 
 ![Woah! Zombie threads have been terminated by NMZT](https://cdn.modrinth.com/data/cached_images/daa8c3a0bf80a8ba2a0855d687cc9dc4cc08c99e.png)
